@@ -60,7 +60,7 @@ const ManageProducts = () => {
                                     <td><button className="btn btn-warning" onClick={() => handelDelete(product._id)}>Delete</button> </td>
                                 }
                             </tr>
-                        </tbody>) :
+                        </tbody>) : products.length === 0 ? <p>no product found</p> :
                         <div className="d-flex justify-content-center m-5">
                             <div className="spinner-border" role="status">
                                 <span className="sr-only"></span>

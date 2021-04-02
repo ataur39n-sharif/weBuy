@@ -40,7 +40,7 @@ const Orders = () => {
                                 }
                             </tr>
                         </tbody>
-                        ) :
+                        ) : orderDetails.length === 0 ? <p>no order found</p> :
                         <div className="d-flex justify-content-center m-5">
                             <div className="spinner-border" role="status">
                                 <span className="sr-only"></span>
