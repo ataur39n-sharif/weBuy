@@ -34,6 +34,7 @@ const Admin = () => {
     }
 
     const handelSubmit = (e) => {
+        e.preventDefault(true);
         if (product.ProductImgUrl !== '') {
             console.log(product);
             const url = `https://fast-sands-79034.herokuapp.com/addProduct`
@@ -45,24 +46,25 @@ const Admin = () => {
                 body: JSON.stringify(product)
             })
                 .then(res => res.json())
-                .then(data => console.log(data))
-        } else {
-            alert('Please wait for uploading img')
+                .then(data => {
+                    console.log(data)
+                })
+                alert('Product added successfully . Reload must required unless you will punished by error ')
         }
     }
 
 
     return (
         <div className="d-flex justify-content-center text-center">
-            
+
             <form className="w-50 ">
-            <h1 className="m-5">Add products</h1>
+                <h1 className="m-5">Add products</h1>
                 <input name="ProductName" type="text" onBlur={handleChange} className="form-control m-2" placeholder="product name" />
                 <input name="ProductPrice" type="text" onBlur={handleChange} className="form-control m-2" placeholder="product price" />
                 <label htmlFor="">Choose a product image</label>
                 <input type="file" onChange={handleImageChange} className="form-control m-2" />
                 {
-                    product.ProductImgUrl !=='' ? <button onClick={handelSubmit}>Submit</button> : <p>Product add button will ber Available after filled all information and upload image .</p>
+                    product.ProductImgUrl !== '' ? <button className="btn btn-dark" onClick={handelSubmit}>Submit</button> : <p>Product add button will ber Available after filled all information and upload image successfully .</p>
                 }
             </form>
         </div>

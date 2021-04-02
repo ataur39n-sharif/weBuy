@@ -20,7 +20,7 @@ const Orders = () => {
         <div className="text-center  d-flex justify-content-center">
             <h1 className="text-center">Orders</h1>
           
-            <table class="table table-striped w-75 m-5">
+            <table className="table table-striped w-75 m-5">
                 <thead>
                     <tr>
                         <th scope="col">Order Id</th>
@@ -41,9 +41,9 @@ const Orders = () => {
                             </tr>
                         </tbody>
                         ) :
-                        <div class="d-flex justify-content-center m-5">
-                            <div class="spinner-border" role="status">
-                                <span class="sr-only"></span>
+                        <div className="d-flex justify-content-center m-5">
+                            <div className="spinner-border" role="status">
+                                <span className="sr-only"></span>
                             </div>
                         </div>
                 }

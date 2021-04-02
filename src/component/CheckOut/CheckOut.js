@@ -50,7 +50,7 @@ const CheckOut = () => {
         <div className='container w-50 text-center m-5'>
 
             {
-                <table class="table table-striped table-dark">
+                <table className="table table-striped table-dark">
                     <thead>
                         <tr>
                             <th scope="col">Product Name</th>

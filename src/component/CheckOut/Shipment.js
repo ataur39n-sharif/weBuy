@@ -42,7 +42,7 @@ const Shipment = () => {
                 .then(data => {
                     console.log(data);
                     if (data) {
-                        alert('order successfully placed')
+                        alert('order successfully placed . check details on order section .')
                     }
                 })
 
@@ -64,7 +64,7 @@ const Shipment = () => {
                 <input className="form-control m-2 custom-required" type="text" id='number' placeholder="Enter your mobile number"/>
                 <input className="form-control m-2 custom-required" type="text" id='address' placeholder='Enter your address' />
 
-                <button onClick={handelSubmit}>Place Order</button>
+                <button className='btn btn-dark' onClick={handelSubmit}>Place Order</button>
             </form>
         </div>
     );

@@ -34,9 +34,9 @@ const OrderDetails = () => {
                         <p>Product Cost : ${orderDetail.orderDetails.ProductPrice}</p>
                         <p>Product Quantity : {orderDetail.orderDetails.ProductQuantity}</p>
                     </div>
-                </div> : <div class="d-flex justify-content-center m-5">
-                    <div class="spinner-border" role="status">
-                        <span class="sr-only"></span>
+                </div> : <div className="d-flex justify-content-center m-5">
+                    <div className="spinner-border" role="status">
+                        <span className="sr-only"></span>
                     </div>
                 </div>
             }
