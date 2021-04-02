@@ -17,6 +17,7 @@ import CheckOut from "./component/CheckOut/CheckOut";
 import ManageProducts from "./component/Admin/ManageProducts";
 import Shipment from "./component/CheckOut/Shipment";
 import Orders from "./component/Orders/Orders";
+import OrderDetails from "./component/Orders/OrderDetails";
 
 export const userContext = createContext()
 
@@ -50,18 +51,21 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
               </li>
-              <li className="nav-item">
+              {
+                loggedInUser.email && <li className="nav-item">
                 <Link className="nav-link" to='/admin'>Admin</Link>
               </li>
-              <li className="nav-item">
+              }
+             { loggedInUser.email && <li className="nav-item">
                 <Link className="nav-link" to='/manage'>Manage Products </Link>
-              </li>
-              <li className="nav-item">
+              </li>}
+              
+              {/* <li className="nav-item">
                 <Link className="nav-link" to='/products'>Products</Link>
-              </li>
-              <li className="nav-item">
+              </li> */}
+              {loggedInUser.email && <li className="nav-item">
                 <Link className="nav-link" to='/orders'>Orders</Link>
-              </li>
+              </li>}
               <li className="nav-item">
                 {
                   userLoggedIn ?<Link className="nav-link" to='/'><button className="btn btn-warning " onClick={handelLogOut}> <img style={{borderRadius: '50%', height: '50px'}} src={img} alt=""/> {name}</button></Link>:<Link className="nav-link" to='/login'>LogIn</Link>
@@ -98,6 +102,9 @@ function App() {
         </PrivateRoute>
         <PrivateRoute path="/orders">
           <Orders></Orders>
+        </PrivateRoute>
+        <PrivateRoute path="/orderDetails/:id">
+          <OrderDetails></OrderDetails>
         </PrivateRoute>
       </Switch>
     </Router>

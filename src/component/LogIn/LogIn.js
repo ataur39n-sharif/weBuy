@@ -45,8 +45,8 @@ const LogIn = () => {
     console.log(loggedInUser);
 
     return (
-        <div className="container m-5">
-            <button onClick={handelSignIn}>click for loggedIn</button>
+        <div className="d-flex justify-content-center align-items-center m-5">
+            <button className="btn btn-dark" onClick={handelSignIn}>click for loggedIn</button>
         </div>
     );
 };

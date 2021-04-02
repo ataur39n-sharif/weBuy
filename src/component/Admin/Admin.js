@@ -54,7 +54,9 @@ const Admin = () => {
 
     return (
         <div className="d-flex justify-content-center text-center">
+            
             <form className="w-50 ">
+            <h1 className="m-5">Add products</h1>
                 <input name="ProductName" type="text" onBlur={handleChange} className="form-control m-2" placeholder="product name" />
                 <input name="ProductPrice" type="text" onBlur={handleChange} className="form-control m-2" placeholder="product price" />
                 <label htmlFor="">Choose a product image</label>

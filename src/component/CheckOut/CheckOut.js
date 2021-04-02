@@ -47,22 +47,28 @@ const CheckOut = () => {
     console.log(checkOut.ProductName);
 
     return (
-        <div className='container w-50 text-center'>
-            <div className='d-flex justify-content-between'>
-                {/* <img src="" alt=""/> */}
-                <span><strong>name</strong></span>
-                <span><strong>quantity</strong></span>
-                <span><strong>price</strong></span>
-            </div>
+        <div className='container w-50 text-center m-5'>
+
             {
-                product.ProductName &&
-                <div className='d-flex justify-content-between text-center'>
-                    {/* <img src="" alt=""/> */}
-                    <span><strong>{product.ProductName}</strong></span>
-                    <span><strong>1</strong></span>
-                    <span><strong>{product.ProductPrice}</strong></span>
-                </div>
+                <table class="table table-striped table-dark">
+                    <thead>
+                        <tr>
+                            <th scope="col">Product Name</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{product.ProductName}</td>
+                            <td>1</td>
+                            <td>${product.ProductPrice}</td>
+                        </tr>
+                    </tbody>
+                </table>
             }
+
+
             {
                 checkOut.ProductName ? <button className='btn btn-dark' onClick={handelCheckOut}>Process CheckOut</button> :
                     product.ProductName ? <button className='btn btn-warning' onClick={handelContinue}>Continue</button> : <button className='btn btn-dark'>Please Wait</button>
