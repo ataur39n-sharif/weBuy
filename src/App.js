@@ -84,21 +84,21 @@ function App() {
         <Route path="/products">
           <Products></Products>
         </Route>
-        <Route path="/manage">
+        <PrivateRoute path="/manage">
           <ManageProducts></ManageProducts>
-        </Route>
-        <Route exact path="/checkOut">
+        </PrivateRoute>
+        <PrivateRoute exact path="/checkOut">
           <CheckOut></CheckOut>
-        </Route>
-        <Route path="/checkOut/:key">
+        </PrivateRoute>
+        <PrivateRoute path="/checkOut/:key">
           <CheckOut></CheckOut>
-        </Route>
-        <Route path="/shipment">
+        </PrivateRoute>
+        <PrivateRoute path="/shipment">
           <Shipment></Shipment>
-        </Route>
-        <Route path="/orders">
+        </PrivateRoute>
+        <PrivateRoute path="/orders">
           <Orders></Orders>
-        </Route>
+        </PrivateRoute>
       </Switch>
     </Router>
     </userContext.Provider>
