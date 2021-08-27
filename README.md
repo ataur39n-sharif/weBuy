@@ -13,4 +13,4 @@ _1. product add
 3. place order (choose product > confirm > set shipping address)
 4. show order list and details_
 
-### **here is my live site link ** - [https://webuy.netlify.app/](weBuy)
+### **here is my live site link ** - [webuy](https://webuy.netlify.app/)
